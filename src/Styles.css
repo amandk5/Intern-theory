@@ -41,7 +41,7 @@
 }
 /* first container inside elements style */
 /* cont1 to darken the background image  */
-.cont{
+.cont-1{
     background: linear-gradient(
         rgb(68, 100, 120,0.60), 
         rgb(68, 100, 120,0.60)
@@ -51,13 +51,6 @@
     background-size: cover;
     height: 100%;
     overflow: hidden;
-}
-.cont1{
-    width: 100%;
-    height: 85%;
-    opacity: 0.6;
-    position: absolute;
-    background: rgb(68, 100, 120) none repeat scroll 0% 0%;
 }
 /* box which contains the search functionality  */
 .cont11{
@@ -102,6 +95,7 @@
     border-bottom: 3px solid black;
 }
 .searchBox input{
+    max-width: 180px;
     box-sizing: border-box;
     background: transparent;
     outline: none;
@@ -126,6 +120,53 @@
 /* .searchBox>input,select{
     background: rgba(255, 255, 255, 0.77) none repeat scroll 0% 0%;
 } */
+
+/* container 2  */
+.cont-2{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    /* flex-wrap:wrap; */
+}
+.cont-2>div{
+    padding: 20px;
+}
+.cont-2 h1{
+    font-size: 28px;
+    font-weight: bold;
+    text-align: left;
+}
+.cont-2 p {
+    font-size: 14px;
+    text-align: left;
+}
+.cont-2 img{
+    width: 1000px;
+}
+
+/* container 3  */
+.cont-3{
+    padding: 50px 20px;
+    background-color: #f7fcfe;
+}
+.cont-3 h1{
+    font-weight: bold;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+.cont-3>div{
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 5px;
+}
+.cont-3 img{
+    width: 100%;
+}
+
 
 
 
