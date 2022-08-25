@@ -215,6 +215,11 @@
 .cont-7-footer hr{
     border: 0.5px solid rgb(234, 232, 232);
 }
+/* login page background */
+.login{
+    min-height: 500px;
+    background-image:url('https://assets.interntheory.com/creative/Web-Banner.jpg');
+}
 
 
 

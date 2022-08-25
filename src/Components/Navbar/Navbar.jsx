@@ -17,7 +17,9 @@ import {
 import { FaShoppingCart } from "react-icons/fa";
 import React from "react";
 import "../../Styles.css";
+import { useNavigate } from "react-router-dom";
 export default function Navbar() {
+  const navigate=useNavigate();
   return (
     <div className="navbar">
       {/* menu with navigation links */}
@@ -51,6 +53,7 @@ export default function Navbar() {
           width={"80px"}
           height={"40px"}
           className={"logo"}
+          onClick={()=>navigate('/')}
         />
       </div>
       <div>
@@ -63,6 +66,7 @@ export default function Navbar() {
             width={"100%"}
             fontSize={"18px"}
             colorScheme="red"
+            onClick={()=>navigate('/login/student')}
           >
             SIGN IN
           </Button>
