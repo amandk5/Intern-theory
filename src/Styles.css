@@ -41,7 +41,7 @@
 }
 /* first container inside elements style */
 /* cont1 to darken the background image  */
-.cont{
+.cont-1{
     background: linear-gradient(
         rgb(68, 100, 120,0.60), 
         rgb(68, 100, 120,0.60)
@@ -51,13 +51,6 @@
     background-size: cover;
     height: 100%;
     overflow: hidden;
-}
-.cont1{
-    width: 100%;
-    height: 85%;
-    opacity: 0.6;
-    position: absolute;
-    background: rgb(68, 100, 120) none repeat scroll 0% 0%;
 }
 /* box which contains the search functionality  */
 .cont11{
@@ -102,6 +95,7 @@
     border-bottom: 3px solid black;
 }
 .searchBox input{
+    max-width: 180px;
     box-sizing: border-box;
     background: transparent;
     outline: none;
@@ -127,6 +121,112 @@
     background: rgba(255, 255, 255, 0.77) none repeat scroll 0% 0%;
 } */
 
+/* container 2  and container 5*/
+.cont-2,.cont-5{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-wrap:wrap;
+}
+.cont-2>div,.cont-5>div{
+    width: 50%;
+    padding: 20px;
+}
+.cont-2 h1,.cont-5 h1{
+    font-size: 28px;
+    font-weight: bold;
+    text-align: left;
+}
+.cont-2 p,.cont-5 p {
+    font-size: 14px;
+    text-align: left;
+}
+.cont-2 img,.cont-5 img{
+    width: 1000px;
+}
+
+/* container 3  and container 4*/
+.cont-3{
+    padding: 50px 20px;
+    background-color: #f7fcfe;
+}
+.cont-3 h1,.cont-4 h1{
+    font-weight: bold;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+.cont-3>div{
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 6px;
+}
+.cont-3 img,.cont-4 img{
+    width: 100%;
+    border-radius: 0.25rem;
+}
+/* container 4 and container 6 slideshow*/
+
+.cont-4,.cont-6{
+    padding: 50px 20px;
+    background-color: #EEEEEE;
+}
+.cont-4>div{
+    display: grid;
+    grid-template-columns: repeat(3,33%);
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+}
+/* container 6 slideshow */
+
+/* container 7 footer  */
+.cont-7-footer{
+    font-size: 14px;
+    color: white;
+    padding: 50px 20px 30px 20px;
+    background-color: #446478;
+}
+.cont-7-footer>div:first-child{
+    display: grid;
+    grid-template-columns: 10% 22% 22% 22%;
+    justify-content: space-around;
+    gap: 50px;
+    margin-bottom: 20px;
+}
+.cont-7-footer>div:first-child>div:first-child{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+.cont-7-footer>div:first-child p{
+    line-height: 1.25rem;
+    text-align: left;
+}
+.cont-7-footer>div:nth-child(2){
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+}
+.cont-7-footer hr{
+    border: 0.5px solid rgb(234, 232, 232);
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -138,5 +238,9 @@
     }
     .cont11 {
       height: 100%;
+    }
+    /* cont-2 and cont-5  */
+    .cont-2>div,.cont-5>div{
+        width: 100%;
     }
   }
