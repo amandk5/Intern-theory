@@ -8,7 +8,8 @@ export default function AllRoutes() {
     <Routes>
         <Route path='/' element={<HomePage/>}/>
         <Route path='/internships'/>
-        <Route path='/login/student' element={<LoginPage/>}/>
+        <Route path='/login/student' element={<LoginPage loginType="student"/>}/>
+        <Route path='/login/company' element={<LoginPage loginType="company"/>}/>
         <Route/>
         <Route/>
     </Routes>
