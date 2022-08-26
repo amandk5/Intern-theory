@@ -1,6 +1,6 @@
 import { Button, Checkbox, Input } from "@chakra-ui/react";
 import React from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar/Navbar";
 import { BsFacebook, BsLinkedin } from "react-icons/bs";
@@ -55,8 +55,8 @@ export default function LoginPage({ loginType }) {
                   <BsFacebook size="28px" color="#4267B2" />
                 </button>
                 <h1>SIGNIN WITH FACEBOOK</h1>
-                <h1></h1>
-                <h1></h1>
+                <h1>{null}</h1>
+                <h1>{null}</h1>
               </div>
               <div className="signin-google" style={{ background: "#087CDD" }}>
                 <button
@@ -69,8 +69,8 @@ export default function LoginPage({ loginType }) {
                   <FcGoogle size="28px" />
                 </button>
                 <h1>SIGNIN WITH GOOGLE</h1>
-                <h1></h1>
-                <h1></h1>
+                <h1>{null}</h1>
+                <h1>{null}</h1>
               </div>
             </>
           ) : (
@@ -85,8 +85,8 @@ export default function LoginPage({ loginType }) {
                 <BsLinkedin size="28px" color="#377CA5" />
               </button>
               <h1>SIGNIN WITH LINKEDIN</h1>
-              <h1></h1>
-              <h1></h1>
+              <h1>{null}</h1>
+              <h1>{null}</h1>
             </div>
           )}
           <span style={{ color: "grey", fontSize: "15px" }}>OR</span>

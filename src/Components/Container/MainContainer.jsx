@@ -12,8 +12,6 @@ import l8 from "../../Images/l8.PNG";
 import u1 from "../../Images/upskill1.PNG";
 import u2 from "../../Images/upskill2.PNG";
 import u3 from "../../Images/upskill3.PNG";
-import { AiFillLinkedin, AiFillTwitterSquare } from "react-icons/ai";
-import { FaInstagramSquare, FaFacebookSquare } from "react-icons/fa";
 
 import "../../Styles.css";
 import Footer from "../Footer";
