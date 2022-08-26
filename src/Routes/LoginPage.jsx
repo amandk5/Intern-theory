@@ -3,7 +3,7 @@ import React from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar/Navbar";
-import { BsFacebook,BsLinkedin } from "react-icons/bs";
+import { BsFacebook, BsLinkedin } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";
 import "../Styles.css";
 
@@ -16,8 +16,26 @@ export default function LoginPage({ loginType }) {
       <div className="login-container">
         <div className="login-signup-form-box">
           <div>
-            <Button onClick={() => navigate("/login/student")}>STUDENT</Button>
-            <Button onClick={() => navigate("/login/company")}>COMPANY</Button>
+            <Button
+              onClick={() => navigate("/login/student")}
+              style={
+                loginType === "student"
+                  ? { borderBottom: "3px solid #087CDD" , borderRadius:"0px", color:"#087CDD"}
+                  : null
+              }
+            >
+              STUDENT
+            </Button>
+            <Button
+              onClick={() => navigate("/login/company")}
+              style={
+                loginType === "company"
+                  ? { borderBottom: "3px solid #087CDD", borderRadius:"0px", color:"#087CDD" }
+                  : null
+              }
+            >
+              COMPANY
+            </Button>
           </div>
           <h1>Login</h1>
           <p className="note">
@@ -64,16 +82,16 @@ export default function LoginPage({ loginType }) {
                   padding: "5px",
                 }}
               >
-                <BsLinkedin size="28px" color="#377CA5"/>
+                <BsLinkedin size="28px" color="#377CA5" />
               </button>
               <h1>SIGNIN WITH LINKEDIN</h1>
               <h1></h1>
               <h1></h1>
             </div>
           )}
-          <span style={{color:"grey",fontSize:"15px"}}>OR</span>
-          <Input placeholder="Enter Email" className="email"/>
-          <Input placeholder="Password" className="password"/>
+          <span style={{ color: "grey", fontSize: "15px" }}>OR</span>
+          <Input placeholder="Enter Email" className="email" />
+          <Input placeholder="Password" className="password" />
           <div
             style={{
               display: "flex",

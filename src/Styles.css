@@ -235,6 +235,7 @@
     background-color: white;
 }
 .login-signup-form-box>h1{
+    margin: 10px auto;
     text-align: left;
     font-weight: bold;
     font-size: 23px;
