@@ -6,10 +6,18 @@ import Navbar from "../Components/Navbar/Navbar";
 import { BsFacebook, BsLinkedin } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";
 import "../Styles.css";
+import { useEffect } from "react";
 
 export default function LoginPage({ loginType }) {
   const navigate = useNavigate();
 
+  useEffect(() => {
+    // fetch(
+    //   "https://www.interntheory.com/api/internships/internships-in-delhi?page=1&size=10",
+    //   { method:"GET",mode: "cors" }
+    // ).then((response) => response.json()).then((result) => console.log(result)).catch((error) => console.log("error", error));
+  
+  }, []);
   return (
     <div>
       <Navbar />
@@ -20,7 +28,11 @@ export default function LoginPage({ loginType }) {
               onClick={() => navigate("/login/student")}
               style={
                 loginType === "student"
-                  ? { borderBottom: "3px solid #087CDD" , borderRadius:"0px", color:"#087CDD"}
+                  ? {
+                      borderBottom: "3px solid #087CDD",
+                      borderRadius: "0px",
+                      color: "#087CDD",
+                    }
                   : null
               }
             >
@@ -30,7 +42,11 @@ export default function LoginPage({ loginType }) {
               onClick={() => navigate("/login/company")}
               style={
                 loginType === "company"
-                  ? { borderBottom: "3px solid #087CDD", borderRadius:"0px", color:"#087CDD" }
+                  ? {
+                      borderBottom: "3px solid #087CDD",
+                      borderRadius: "0px",
+                      color: "#087CDD",
+                    }
                   : null
               }
             >
@@ -40,7 +56,7 @@ export default function LoginPage({ loginType }) {
           <h1>Login</h1>
           <p className="note">
             If you are a company looking to hire interns, please login as a
-            company by clicking <span className="link">here</span>.
+            company by clicking <span className="link" onClick={()=>navigate("/login/company")}>here</span>.
           </p>
           {loginType === "student" ? (
             <>
@@ -107,7 +123,7 @@ export default function LoginPage({ loginType }) {
           </div>
           <p style={{ fontSize: "12px" }}>
             Don't have an account?{" "}
-            <span className="link">Create your account</span>
+            <span className="link" onClick={()=>navigate("/register/student")}>Create your account</span>
           </p>
           <Button className="login-btn" variant="white">
             LOGIN

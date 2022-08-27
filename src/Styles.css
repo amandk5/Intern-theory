@@ -243,7 +243,7 @@
 .login-signup-form-box .note{
     font-size: 15px;
     text-align: left;
-    border: 1px dotted #DF1E2E;
+    border: 1px dashed #DF1E2E;
     margin: 10px auto;
     border-radius: 0.25rem;
     padding: 5px;
@@ -285,6 +285,92 @@
 }
 .login-btn:hover{
     background-color: rgba(249, 180, 191, 0.107);
+}
+
+/* register page css  */
+.ifAlreadyRegistered{
+    text-align: left;
+    font-size: 15px;
+    color: gray;
+}
+
+/* internship page  */
+.cont-1-internships{
+    /* background: linear-gradient(
+        rgb(68, 100, 120,0.60), 
+        rgb(68, 100, 120,0.60)
+      ),url(
+        "https://assets.interntheory.com/creative/Homepage-Banner.png"        
+    ) no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden; */
+    background: white;
+}
+.cont11-internships{
+    width: 100%;
+    height: auto;
+    color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/* container - 2 internships  */
+.cont-2-internships{
+    /* padding-top: 20px;
+    padding-bottom: 20px; */
+    border: 1px solid black;
+}
+.internship-Box{
+    padding-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: 1px dotted black;   
+    line-height: 1.6;
+}
+.internship-Box img{
+    width:50%;
+    margin: auto;
+}
+.internship-Box>div:first-child{
+    text-align: left;
+}
+.internship-Box>div:last-child{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: right;
+}
+.internship-Box>div:first-child>p{
+    font-size: 14px;
+    text-align: left;
+    font-weight: normal;
+}
+.internship-Box>div:last-child>p{
+    font-size: 14px;
+    font-weight: normal;
+}
+.cont-2-internships>h1{
+    font-size: 28px;
+    font-weight: bold;
+    text-align: left;
+    /* margin-left: 40px; */
+}
+.cont-2-internships h3{
+    font-size: 22px;
+    font-weight: 620;
+}
+.cont-2-internships h4{
+    font-size: 18px;
+    font-weight: 500;
+}
+.internship-Box>div:first-child>p{
+    font-size: 14px;
+    text-align: left;
+    font-weight: normal;
 }
 
 
