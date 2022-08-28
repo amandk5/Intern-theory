@@ -18,8 +18,11 @@ import { FaShoppingCart } from "react-icons/fa";
 import React from "react";
 import "../../Styles.css";
 import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { AppContext } from "../../Context/AppContext";
 export default function Navbar() {
-  const navigate=useNavigate();
+  const { isAuth, token,login } = useContext(AppContext);
+  const navigate = useNavigate();
   return (
     <div className="navbar">
       {/* menu with navigation links */}
@@ -53,23 +56,47 @@ export default function Navbar() {
           width={"80px"}
           height={"40px"}
           className={"logo"}
-          onClick={()=>navigate('/')}
+          onClick={() => navigate("/")}
         />
+        {isAuth ? <h1>{token}</h1> : null}
       </div>
       <div>
+        {isAuth ? (
+          <>
+          <div style={{display:"flex"}}>
+            <Button
+              size={"sm"}
+              width={"100%"}
+              fontSize={"18px"}
+              colorScheme="blue"
+              onClick={() => navigate("/internships/applied")}
+            >
+              Applied internships
+            </Button>
+          <p className="link" style={{color:"red",fontSize:"14px"}} onClick={()=>{
+            login(null)
+            navigate("/")
+          }}>LOG OUT</p>
+          </div>      
+          </>
+        ) : null}
         <div className="cartBox">
-          <FaShoppingCart className="cart"/>
+          {isAuth ? <FaShoppingCart className="cart" /> : null}
         </div>
-        <div style={{margin:"auto"}}>
-          <Button
-            size={"sm"}
-            width={"100%"}
-            fontSize={"18px"}
-            colorScheme="red"
-            onClick={()=>navigate('/login/student')}
-          >
-            SIGN IN
-          </Button>
+        <div style={{ margin: "auto" }}>
+          {isAuth ? (
+            <h1>{token}</h1>
+          ) : (
+            <Button
+              size={"sm"}
+              width={"100%"}
+              fontSize={"18px"}
+              colorScheme="red"
+              onClick={() => navigate("/login/student")}
+            >
+              SIGN IN
+            </Button>
+          )}
         </div>
       </div>
     </div>
