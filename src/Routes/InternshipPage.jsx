@@ -1,8 +1,21 @@
 import { Box, Container } from "@chakra-ui/react";
 import React from "react";
+import { useEffect } from "react";
+import axios from 'axios';
 import "../Styles.css";
+import { useState } from "react";
+import InternshipCard from "../Components/InternshipCard";
+import { useNavigate } from "react-router-dom";
 
 export default function InternshipPage() {
+    const [internshipData,setInternshipData] = useState([]);
+    const navigate = useNavigate();
+
+    useEffect(()=>{
+        axios.get("https://stark-falls-73043.herokuapp.com/internships")
+        .then(res=>setInternshipData(res.data));
+    },[])
+
   return (
     <Container
       className="cont-2-internships"
@@ -25,12 +38,32 @@ export default function InternshipPage() {
           <img
             src="https://assets.interntheory.com/creative/logo.png"
             alt="internTheory"
+            width={"70px"}
           />
-          <p>
-            <span className="link"><b>UPGRADE SKILLS</b></span>
-          </p>
+          <a className="link" href="https://www.interntheory.com/courses?utm_source=internshipsleftman&utm_medium=webpage" style={{fontSize:"14px"}}>
+            <b>UPGRADE SKILLS</b>
+          </a>
         </div>
       </div>
+
+      {/* displaying list of internships available */}
+      {
+        internshipData.map(internship=>(
+            <InternshipCard
+                id={internship.id}
+                key={internship.id}
+                image={internship.image}
+                profile={internship.profile}
+                company={internship.company}
+                internship_type={internship.internship_type}
+                working_field={internship.working_field}
+                location={internship.location}
+                stipend={internship.stipend}
+                weeks_left={internship.weeks_left}
+                type={internship.type}
+            />
+        ))
+      }
     </Container>
   );
 }

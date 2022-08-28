@@ -284,7 +284,7 @@
     color: #DF1E2E;
 }
 .login-btn:hover{
-    background-color: rgba(249, 180, 191, 0.107);
+    background-color: rgba(249, 180, 191, 0.379);
 }
 
 /* register page css  */
@@ -332,7 +332,6 @@
     line-height: 1.6;
 }
 .internship-Box img{
-    width:50%;
     margin: auto;
 }
 .internship-Box>div:first-child{
@@ -372,10 +371,23 @@
     text-align: left;
     font-weight: normal;
 }
-
-
-
-
+/* internship details page  */
+.internship-Box-Details{
+    margin-bottom: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 1px dotted black;   
+    line-height: 1.6;
+}
+/* go back internship page  */
+.back:hover{
+    text-decoration:none;
+    background-color: rgba(220, 238, 244, 0.74);
+    border-radius: 0.25rem;
+}
 
 
 

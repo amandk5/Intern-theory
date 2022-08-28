@@ -1,9 +1,13 @@
 import { Box, Button, Container } from "@chakra-ui/react";
 import React from "react";
+import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { AppContext } from "../Context/AppContext";
 import "../Styles.css";
 
 export default function SearchBox({ page_type }) {
+  const {isAuth } = useContext(AppContext);
+
   const navigate = useNavigate();
   return (
     <Container
@@ -54,7 +58,9 @@ export default function SearchBox({ page_type }) {
               colorScheme={page_type ? "blue" : "red"}
               color="white"
               size="sm"
-              onClick={() => navigate("/internships")}
+              onClick={() => {
+                isAuth ? navigate("/internships") : alert("You need to login first")
+              }}
             >
               SEARCH
             </Button>
