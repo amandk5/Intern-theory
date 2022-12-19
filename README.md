@@ -4,8 +4,6 @@
 
 ### Vercel Link - <a href="https://ubiquitous-wire-4930.vercel.app/">Intern-theory Clone</a>
 
-<img src="https://i.postimg.cc/X7XPrg4H/interntheory.png" alt="intern-theory homepage"/>
-
 # Technology
 
     Frontend: HTML, CSS, JS, ReactJs, Chakra-UI
@@ -21,4 +19,25 @@
     -showing the list of Internships avilable to users who're searching for Internships 
     -user can apply for Internship and this data is being saved using localstorage
     -user can also cancel the application in which they have applied the Internship
-    
+
+## Below are some of the Screenshots with features:
+<ul>
+    <li>
+     <div>
+         <h4>homepage</h4>
+         <img src="https://i.postimg.cc/X7XPrg4H/interntheory.png" alt="intern-theory homepage"/>
+     </div>
+    </li>
+    <li>
+     <div>
+         <h4>register page</h4>
+         <img src="https://i.postimg.cc/TwCXhCM3/intern-Theory-Register.png" alt="intern-theory register"/>
+     </div>
+    </li>
+    <li>
+     <div>
+         <h4>login page</h4>
+         <img src="https://i.postimg.cc/wBF6s6Dz/intern-Theory-Login.png" alt="intern-theory login"/>
+     </div>
+    </li>
+</ul>
