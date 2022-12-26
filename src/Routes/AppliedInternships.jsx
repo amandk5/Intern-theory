@@ -15,7 +15,7 @@ export default function AppliedInternships({ pageType }) {
 
   useEffect(() => {
     axios
-      .get("https://stark-falls-73043.herokuapp.com/internships")
+      .get("https://json-server-p1rm.onrender.com/internships")
       .then((res) => setInternshipData(res.data));
   }, []);
 

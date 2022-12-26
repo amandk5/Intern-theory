@@ -17,7 +17,7 @@ export default function InternshipDetails() {
 
   useEffect(() => {
     axios
-      .get(`https://stark-falls-73043.herokuapp.com/internships/${id}`)
+      .get(`https://json-server-p1rm.onrender.com/internships/${id}`)
       .then((res) => {
         setData({
           id: res.data.id,
