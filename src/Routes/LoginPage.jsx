@@ -123,11 +123,13 @@ export default function LoginPage({ loginType }) {
           )}
           <span style={{ color: "grey", fontSize: "15px" }}>OR</span>
           <Input
+            type="email"
             placeholder="Enter Email"
             className="email"
             onChange={(e) => setEmail(e.target.value)}
           />
           <Input
+            type="password"
             placeholder="Password"
             className="password"
             onChange={(e) => setPassword(e.target.value)}
@@ -158,19 +160,17 @@ export default function LoginPage({ loginType }) {
             className="login-btn"
             variant="white"
             onClick={() => {
-              const getStatus = dispatch(
-                LOGIN_USER(email, password)
-              );
+              const getStatus = dispatch(LOGIN_USER(email, password));
               setStatus(getStatus);
               console.log(getStatus);
               // setTimeout(() => {
-                if (status === false) {
-                  alert("Login Failed");
-                } else {
-                  login(status)
-                  alert("Login Successful");                  
-                  navigate("/internships");
-                }
+              if (status === false) {
+                alert("Login Failed");
+              } else {
+                login(status);
+                alert("Login Successful");
+                navigate("/internships");
+              }
               // }, 1000);
             }}
           >

@@ -86,11 +86,13 @@ export default function RegisterPage() {
             onChange={(e) => setLastName(e.target.value)}
           />
           <Input
+            type="email"
             placeholder="Email"
             className="email"
             onChange={(e) => setEmail(e.target.value)}
           />
           <Input
+            type="password"
             placeholder="Password"
             className="password"
             onChange={(e) => setPassword(e.target.value)}
@@ -124,9 +126,9 @@ export default function RegisterPage() {
               setTimeout(() => {
                 if (status === false) {
                   alert("Registration Failed");
-                } else {              
-                    alert("Registration Successful");
-                    navigate("/login/student");                  
+                } else {
+                  alert("Registration Successful");
+                  navigate("/login/student");
                 }
               }, 500);
             }}
